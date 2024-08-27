@@ -1,0 +1,871 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::selection{
+    color: #ffffff;
+    background-color: #2ac8b8;
+}
+
+::selection{
+    color: #ffffff;
+    background-color: #2ac8b8;
+}
+
+
+/* For WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the track (background of the scrollbar) */
+    border-radius: 1px; /* Rounded edges for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2ac8b8; /* Color of the scrollbar handle */
+    border-radius: 1px; /* Rounded edges for the handle */
+    border: 0px solid #ffffff; /* Optional: Add some space around the handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3; /* Darker color when hovering over the scrollbar */
+}
+
+body{
+    padding-top: 70px; /* Adjust based on the height of your header */
+}
+
+/* General Header Styling ....................................................................................................*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    width: 100%;
+}
+
+/* Inner Container for Spacing */
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 70%;
+    margin: 0 auto; /* Center the inner container */
+    width: 100%;
+
+    transition: max-width 0.3s ease, transform 0.6s cubic-bezier(0.87, 0, 0.13, 1); /* Added transition effect */
+}
+
+.header-expanded {
+    max-width: 80%;
+    transform: scale(1.05); /* Slightly scale up for emphasis */
+}
+
+/* Flex container for even spacing */
+.header-inner > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo and Text */
+.logo-container {
+    justify-content: flex-start;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2ac8b8;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    color: #2ac8b8;
+}
+
+.brand-name {
+    margin-left: 15px;
+    font-size: 20px;
+    color: #343a40;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Search Box */
+.search-container {
+    max-width: 400px;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.search-icon {
+    margin: 6px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+/* Extra Texts */
+.extra-texts {
+    justify-content: center;
+    cursor: pointer;
+}
+
+.extra-texts span {
+    margin: 0 15px;
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.extra-texts span:hover {
+    margin: 0 15px;
+    font-size: 16px;
+    color: #2ac8b8;
+}
+
+/* Support Button */
+.support-button {
+    max-width: 180px;
+    justify-content: center;
+    padding: 10px 0px;
+    background-color: #2ac8b8;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.support-button:hover {
+    max-width: 140px;
+    justify-content: center;
+    padding: 10px 10px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    color: #2ac8b8;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+.loan-button {
+    max-width: 180px;
+    justify-content: center;
+    padding: 10px 0px;
+    background-color: #2ac8b8;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.loan-button:hover {
+    max-width: 140px;
+    justify-content: center;
+    padding: 10px 10px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    color: #2ac8b8;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+/* entrepreneur Button */
+.entrepreneur-button {
+    max-width: 180px;
+    justify-content: center;
+    padding: 10px 0px;
+    background-color: #2ac8b8;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.entrepreneur-button:hover {
+    max-width: 140px;
+    justify-content: center;
+    padding: 10px 10px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    color: #2ac8b8;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.a_decor{
+    text-decoration: none;
+}
+
+.a_decor1{
+    text-decoration: none;
+    color: white
+}
+
+
+
+
+
+
+/* lend options ...........................................................................................*/
+.main-container {
+    width: 40%;
+    margin: 3% 17%;
+    padding: 20px;
+}
+
+.profile-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ddd;
+    background-image: url('https://th.bing.com/th/id/OIP.-4v2pkw5mbZv4OLEM1rZMwHaE7?rs=1&pid=ImgDetMain'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: top;
+    margin-right: 20px;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.name {
+    margin: 0;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.bar {
+    height: 10px;
+    background-color: #2ac8b8;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-info, .right-info {
+    flex: 1;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.description-row {
+    margin-bottom: 20px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.location-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background-color: #f3f3f3;
+}
+
+.additional-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    margin-left: 10px;
+}
+
+.top-box span{
+    color: #2ac8b8;
+}
+
+.location-box p{
+    margin-left: 10px;
+}
+
+.location-icon {
+    font-size: 1.2em;
+}
+
+.image-row {
+    margin-bottom: 20px;
+    margin-top: 65px;
+}
+
+.image-row img{
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.11) 0px 8px 24px;
+}
+
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+}
+
+.story-title {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.story-content {
+    margin-bottom: 20px;
+}
+
+.p2{
+    margin-top: 10px;
+}
+
+/* .map {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.11) 0px 8px 24px;
+} */
+
+.map {
+    width: 100%;
+    height: 300px;
+    margin-top: 65px;
+    background-image: url('./images/map.svg'); /* Replace with the path to your image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image within the container */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    border-radius: 20px; /* Rounded corners */
+}
+
+.location-name {
+    font-size: 26px;
+    margin-top: 20px;
+    color: #2ac8b8;
+}
+
+.n1{
+    font-size: 40px;
+    color: #2ac8b8;
+}
+
+.financial-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column, .right-column {
+    width: 48%;
+    margin-top: 0px;
+}
+
+.find-more {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.find-more button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #2ac8b8;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.find-more button:hover {
+    border: none;
+    background-color: #ffffff;
+    color: #2ac8b8;
+    border: 1px solid #2ac8b8;
+    transition: 0.2s;
+}
+
+.contributors {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.contributors h4 {
+    margin: 0;
+    color: #2ac8b8;
+}
+
+.left-contributors{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.right-contributors {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.left_cont{
+    margin-left: 100px !important;
+}
+
+.right_cont{
+    margin-left: 65px !important;
+}
+
+.contributor {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-right: 10px;
+    background-image: url(./images/profile.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.contributor-info p {
+    margin: 0;
+}
+
+.contributors h4{
+    font-size: 26px;
+}
+
+
+
+
+
+
+
+
+/* sticky box ...................................................................................................................*/
+.right-container {
+    position: fixed;
+    right: 15%;
+    top: 20%;
+    padding: 10px;
+    width: 28%;
+}
+
+.right-box {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding-left: 20px;
+  }
+  
+  .top-box{
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px;
+  }
+  
+  .lend-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .amount-options{
+    margin-left: 20px;
+  }
+
+  .amount-options::-ms-expand {
+    display: none; /* Hide the default dropdown arrow in IE */
+}
+
+/* Additional styling for options (limited support) */
+.amount-options option {
+    background-color: #e0e0e0; /* Background color for options */
+    color: #000; /* Text color for options */
+}
+  
+  .lend-options select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  
+  .lend-now {
+    padding: 10px 20px;
+    background-color: #f0ce11;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .lend-now:hover {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid #f0ce11;
+  }
+  
+  .share-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2ac8b8;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.13s;
+  }
+
+  .share-button:hover {
+    background-color: #ffffff;
+    color: #2ac8b8;
+    transition: 0.13s;
+    border: 1px solid #2ac8b8;
+  }
+  
+  .loan-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .lender-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .lender-info img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .loan-details-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .loan-details-btn img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .thunder-icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+  }
+  
+  .bottom-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* footer */
+
+  .footer {
+    display: flex;
+    justify-content: center; /* Center the footer content */
+    padding: 20px;
+    background-color: #f8f9fa;
+    width: 100%;
+}
+
+.footer-item{
+    margin-top: 30px;
+}
+
+.highlight-text {
+    color: #2ac8b8; /* Change this color to whatever you prefer */
+    font-weight: bold; /* Optional: make the text bold */
+    font-size: 100px;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Set the max-width of the footer content */
+    max-width: 1200px; /* Optional: Set a max-width to ensure it doesn't stretch too wide */
+    margin: 40px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-left h3, .footer-center h3, .footer-right h3 {
+    margin-bottom: 10px;
+}
+
+.lend-borrow-heading {
+    color: #2ac8b8; /* Set the color for "Lend" and "Borrow" */
+    font-weight: bold;
+}
+
+/* Ensure all columns have equal space and are left-aligned */
+.footer-left, .footer-center, .footer-right {
+    text-align: left;
+}
+
+
+
+
+
+
+/* chat bot */
+
+/* Chatbot Wrapper */
+.chatbot-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Chatbot Circle */
+.chatbot-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    background-image: url('./images/h1.svg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire circle */
+    background-position: center; /* Centers the image */
+    position: relative; /* Relative positioning for dot alignment */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Dot Position */
+.chatbot-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #2ac8b8; /* Change to desired color */
+    position: absolute;
+    top: -5px; /* Adjust based on your needs */
+    right: 50px; /* Adjust based on your needs */
+    opacity: 1;
+    animation: opacityChange 1s infinite; /* Animates the opacity */
+}
+
+/* Animation for Dot */
+@keyframes opacityChange {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+/* Chatbot Box Styles */
+.chatbot-box {
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0); /* Start with the box scaled down to 0 */
+    transform-origin: bottom right; /* Set the origin of the transformation */
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.chatbot-header {
+    background-color: #2ac8b8;
+    color: white;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    text-align: left;
+}
+
+.chatbot-box.open {
+    transform: scale(1); /* Scale the box to full size when open */
+}
+
+.chatbot-content {
+    padding: 10px;
+    flex-grow: 1;
+    overflow-y: auto; /* Make content scrollable */
+}
+
+.chatbot-buttons button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    text-align: left;
+}
+
+.chatbot-input {
+    padding-top: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 12px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    border-radius: 20px;
+}
+
+.chatbot-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+.chatbot-input button {
+    padding: 10px;
+    background-color: #2ac8b8;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.chatbot-response {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+
+
+/* optional lend and borrow icon spin */
+
+/* .sphere-animation {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 255, 0.5);
+    position: absolute;
+    animation: spin 1.5s linear infinite;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) translateX(30px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(30px) rotate(-360deg);
+    }
+} */

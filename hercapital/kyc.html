@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Application Form</title>
+    <link rel="stylesheet" href="kycstyle.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2> Application Form</h2>
+        <form action="connection.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="business-name">Business Name:</label>
+                <textarea id="business-name" name="business-name" rows="1" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="business-category">Business category:</label>
+                <textarea id="business-category" name="business-category" rows="1" required></textarea>
+            </div>
+
+           <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="loan-amount">Loan Amount:</label>
+                <textarea id="loan-amount" name="loan-amount" rows="1" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="repayment-timeperiod">Repayment Timeperiod:(in months)</label>
+                <input type="number" id="repayment-timeperiod" name="repayment-timeperiod" required>
+            </div>
+
+
+
+            
+
+           
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
